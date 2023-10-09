@@ -30,6 +30,11 @@
             products.forEach(element => {
                 var liElement = document.createElement('li');
                 liElement.innerText = element.name + " - " + element.unitPrice
+                
+                if (element.unitPrice > 50) {
+                        liElement.style.color = "red";
+                    }
+
                 document.querySelector('ul').appendChild(liElement);
             });
         })
